@@ -2,13 +2,13 @@ export function validateName(name) {
   let nameError = null
   let nameRegExp = new RegExp(/^[A-Za-zА-Яа-яёЁ]+(?:[-'\s][A-Za-zА-Яа-яёЁ]+)*$/)
   if (!nameRegExp.test(name)) {
-    nameError = 'The name contains invalid characters or does not start with a letter'
+    nameError = 'Имя содержит недопустимые символы или не начинается с буквы'
   }
   if (name.length > 50) {
-    nameError = 'The name is too long. Max 50 characters'
+    nameError = 'Имя слишком длинное. Максимум - 50 символов'
   }
   if (name.length < 1) {
-    nameError = 'Please enter your first name'
+    nameError = 'Пожалуйста, введите имя'
   }
   return nameError
 }
@@ -17,13 +17,13 @@ export function validateLastName(lastname) {
   let lastNameError = null
   let lastNameRegExp = new RegExp(/^[A-Za-zА-Яа-яёЁ]+(?:[-'\s][A-Za-zА-Яа-яёЁ]+)*$/)
   if (!lastNameRegExp.test(lastname)) {
-    lastNameError = 'The last name contains invalid characters or does not start with a letter'
+    lastNameError = 'Фамилия содержит недопустимые символы или не начинается с буквы'
   }
   if (lastname.length > 50) {
-    lastNameError = 'The last name is too long. Max 50 characters'
+    lastNameError = 'Фамилия слишком длинная. Максимум - 50 символов'
   }
   if (lastname.length < 1) {
-    lastNameError = 'Please enter your last name'
+    lastNameError = 'Пожалуйста, введите фамилию'
   }
   return lastNameError
 }
@@ -32,13 +32,13 @@ export function validateEmail(email) {
   let emailError = null
   let emailRegExp = new RegExp(/^[a-zA-Z0-9._]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$/)
   if (!emailRegExp.test(email)) {
-    emailError = 'The email is invalid or contains invalid characters'
+    emailError = 'Email содержит недопустимые символы или имеет недопустимый формат'
   }
   if (email.length > 50) {
-    emailError = 'The email is too long. Max 50 characters'
+    emailError = 'Email слишком длинный. Максимум - 50 символов'
   }
   if (email.length < 1) {
-    emailError = 'Please enter your email'
+    emailError = 'Пожалуйста, введите email'
   }
   return emailError
 }
@@ -47,16 +47,16 @@ export function validatePassword(password) {
   let passwordError = null
   let passwordRegExp = new RegExp(/^(?=.*?[A-ZА-ЯЁ])(?=.*?[a-zа-яё])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/)
   if (!passwordRegExp.test(password)) {
-    passwordError = 'The password must contain at least 1 uppercase letter, 1 lowercase letter, 1 number and 1 special character (#?!@$%^&*-)'
+    passwordError = 'Пароль должен содержать хотя бы одну заглавную букву, одну строчную букву, одну цифру и один специальный символ (#?!@$%^&*-)'
   }
   if (password.length < 8) {
-    passwordError = 'The password is too short. Min 8 characters'
+    passwordError = 'Пароль слишком короткий. Минимум - 8 символов'
   }
   if (password.length > 30) {
-    passwordError = 'The password is too long. Max 30 characters'
+    passwordError = 'Пароль слишком длинный. Максимум - 30 символов'
   }
   if (password.length < 1) {
-    passwordError = 'Please enter your password'
+    passwordError = 'Пожалуйста, введите пароль'
   }
   return passwordError
 }
@@ -65,7 +65,7 @@ export function validatePasswordConfirm (confirm) {
   let password = document.querySelector('#password').value
   let passwordConfirmError = null
   if (confirm !== password) {
-    passwordConfirmError = 'Password field and confirm password field must match'
+    passwordConfirmError = 'Пароль и подтверждение пароля должны совпадать'
   }
   return passwordConfirmError
 }
@@ -74,13 +74,13 @@ export function validateAge(date) {
   let ageError = null
   let age = (Date.now() - Date.parse(date))/(1000*3600*24*365.25)
   if (!date) {
-    ageError = 'Please enter your date of birth'
+    ageError = 'Пожалуйста, введите дату рождения'
   }
   if (age < 18) {
-    ageError = 'Your age must be 18 and above'
+    ageError = 'Возраст должен быть от 18 лет'
   }
   if (age > 120) {
-    ageError = 'Entered age is too big'
+    ageError = 'Введенный возраст слишком большой'
   }
   return ageError
 }
