@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="./js/registration.js" type="module"></script>
+</head>
+
+<body>
+  <main>
+    <section class="signup">
+      <button class="signup__back-btn btn btn--icon" type="button" aria-label="Back button">
+        <svg class="signup__back-btn-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 12H19M5 12L9 16M5 12L9 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </button>
+      <h1 class="signup__title">Sign Up</h1>
+      <p class="signup__login">
+        Already have an account?
+        <a class="signup__login-link" href="#">Login</a>
+      </p>
+      <form class="signup__form" id="form" action="#" method="POST" autocomplete="off">
+        <div class="signup__form-inner">
+          <div class="custom-input">
+            <label class="custom-input__label" for="first-name">First Name</label>
+            <input class="custom-input__input" type="text" id="first-name">
+            <span class="custom-input__error"></span>
+          </div>
+          <div class="custom-input">
+            <label for="last-name" class="custom-input__label">Last Name</label>
+            <input class="custom-input__input" type="text" id="last-name">
+            <span class="custom-input__error"></span>
+          </div>
+          <div class="custom-input">
+            <label for="email" class="custom-input__label">Email</label>
+            <input class="custom-input__input" type="email" id="email">
+            <span class="custom-input__error"></span>
+          </div>
+          <div class="custom-input">
+            <label for="password" class="custom-input__label">Set password</label>
+            <input class="custom-input__input" type="password" id="password">
+            <span class="custom-input__error"></span>
+          </div>
+          <div class="custom-input">
+            <label for="password-confirm" class="custom-input__label">Confirm password</label>
+            <input class="custom-input__input" type="password" id="password-confirm">
+            <span class="custom-input__error"></span>
+          </div>
+          <div class="custom-input">
+            <label for="birth-day" class="custom-input__label">Birth Day</label>
+            <input class="custom-input__input" type="date" id="birth-day">
+            <span class="custom-input__error"></span>
+          </div>
+        </div>
+        <button class="signup__form-button btn btn--blue" type="submit" id="form-button" disabled>Register</button>
+      </form>
+    </section>
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+.custom-input {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  &__label {
+    color: $color-grey;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.6;
+    letter-spacing: -0.02em;
+
+    &::after {
+      content: '*';
+      color: $color-red;
+    }
+  }
+
+  &__input {
+    padding: 13px 14px;
+    border-radius: 10px;
+    border: 1px solid $color-light-gray;
+    width: 100%;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+
+    &.invalid {
+      border-color: $color-red;
+
+    }
+  }
+
+  &__error {
+    color: $color-red;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.6;
+    letter-spacing: -0.02em;
+  }
+}

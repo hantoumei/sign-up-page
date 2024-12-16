@@ -1,0 +1,38 @@
+.btn {
+  border: none;
+  cursor: pointer;
+
+  &--icon {
+    background-color: transparent;
+    padding: 0;
+    transition: color 0.3s ease;
+
+    &:hover,
+    &:focus-visible {
+      color: $color-grey;
+    }
+  }
+
+  &--blue {
+    font-size: 14px;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+    font-weight: 500;
+    background-color: $color-deep-blue;
+    color: $color-white;
+    padding: 14px 24px;
+    border-radius: 10px;
+    background: linear-gradient(#3773ea 0%, #1e62e7 100%);
+    outline: 1px solid #375DFB;
+
+    &:hover,
+    &:focus-visible {
+      background: $color-violet;
+    }
+
+    &:disabled {
+      background: $color-light-gray2;
+      outline-color: $color-light-gray;
+    }
+  }
+}
